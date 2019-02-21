@@ -1,0 +1,14 @@
+{
+  "main.css": "/tictactoe-react/build/static/css/main.9b1b5f09.chunk.css",
+  "main.js": "/tictactoe-react/build/static/js/main.88f68020.chunk.js",
+  "main.js.map": "/tictactoe-react/build/static/js/main.88f68020.chunk.js.map",
+  "runtime~main.js": "/tictactoe-react/build/static/js/runtime~main.6380e062.js",
+  "runtime~main.js.map": "/tictactoe-react/build/static/js/runtime~main.6380e062.js.map",
+  "static/js/2.ba1ca5ba.chunk.js": "/tictactoe-react/build/static/js/2.ba1ca5ba.chunk.js",
+  "static/js/2.ba1ca5ba.chunk.js.map": "/tictactoe-react/build/static/js/2.ba1ca5ba.chunk.js.map",
+  "index.html": "/tictactoe-react/build/index.html",
+  "precache-manifest.5c286f37bca4a2d7721e2e593127d620.js": "/tictactoe-react/build/precache-manifest.5c286f37bca4a2d7721e2e593127d620.js",
+  "service-worker.js": "/tictactoe-react/build/service-worker.js",
+  "static/css/main.9b1b5f09.chunk.css.map": "/tictactoe-react/build/static/css/main.9b1b5f09.chunk.css.map",
+  "static/media/logo.svg": "/tictactoe-react/build/static/media/logo.5d5d9eef.svg"
+}
