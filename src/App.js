@@ -25,17 +25,17 @@ class App extends Component {
   clickIsSquare(sq) {
     if (this.state.value[sq] !== null) return;
     if (!this.state.playGame) return;
-    const squares = this.state.value.slice();
+    const squares = [...this.state.value];
         squares[sq] = this.setXorO();
-        this.setState({value: squares, theXorO: !this.state.theXorO});
-
-        setTimeout(() => { //
-          this.processingOfGold();
-        }, 50);  
+        this.setState(
+          (prevState) => { return { value: squares, theXorO: !this.state.theXorO, } },
+          () => this.processingOfGold(),
+        );
   }
   render() {
     
     return (
+      
       <div className="Container">
         <div className="Main"></div>
         <div 
@@ -48,20 +48,11 @@ class App extends Component {
           <span>Step: {this.setXorO()}</span>
           <span>score: X-{this.state.scoreX} and O-{this.state.scoreO}</span>
         </div>
-        <div className="App">
-          <Square value={this.state.value[0]} click={() => this.clickIsSquare(0)} />
-          <Square value={this.state.value[1]} click={() => this.clickIsSquare(1)} />
-          <Square value={this.state.value[2]} click={() => this.clickIsSquare(2)} />
-        </div>
-        <div className="App">
-          <Square value={this.state.value[3]} click={() => this.clickIsSquare(3)} />
-          <Square value={this.state.value[4]} click={() => this.clickIsSquare(4)} />
-          <Square value={this.state.value[5]} click={() => this.clickIsSquare(5)} />
-        </div>
-        <div className="App">
-          <Square value={this.state.value[6]} click={() => this.clickIsSquare(6)} />
-          <Square value={this.state.value[7]} click={() => this.clickIsSquare(7)} />
-          <Square value={this.state.value[8]} click={() => this.clickIsSquare(8)} />
+        <div className="Board">
+          { this.state.value.map((el, index) => (
+            <Square  key={index} value={this.state.value[index]} click={() => this.clickIsSquare(index)} />))
+          }
+      
         </div>
       <button onClick={() => this.setState({value: Array(9).fill(null), 
           theXorY: this.setXorO(),
